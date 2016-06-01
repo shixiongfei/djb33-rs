@@ -1,0 +1,11 @@
+[package]
+name = "djb33"
+version = "0.1.0"
+authors = ["Xiongfei Shi <jenson.shixf@gmail.com>"]
+homepage = "https://github.com/jenson-shi/djb33-rs"
+repository = "https://github.com/jenson-shi/djb33-rs.git"
+license = "MIT"
+readme = "README.md"
+description = "Redis Protocol write in Rust."
+
+[dependencies]
