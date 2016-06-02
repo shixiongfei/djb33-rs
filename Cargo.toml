@@ -7,5 +7,6 @@ repository = "https://github.com/jenson-shi/djb33-rs.git"
 license = "MIT"
 readme = "README.md"
 description = "DJB33 hash algorithm write in Rust."
+keywords = ["djb33", "hash", "checksum"]
 
 [dependencies]
