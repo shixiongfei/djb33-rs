@@ -1,6 +1,10 @@
 # djb33-rs
 DJB33 hash algorithm write in Rust
 
+### Run example
+
+    $ cargo run --example djb33-example
+
 ### Installation
 
 Add djb33 via your Cargo.toml

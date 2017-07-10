@@ -10,3 +10,7 @@ description = "DJB33 hash algorithm write in Rust."
 keywords = ["djb33", "hash", "checksum"]
 
 [dependencies]
+
+[[example]]
+name = "djb33-example"
+path = "examples/main.rs"
