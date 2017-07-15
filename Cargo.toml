@@ -1,6 +1,6 @@
 [package]
 name = "djb33"
-version = "0.2.0"
+version = "0.3.0"
 authors = ["Xiongfei Shi <jenson.shixf@gmail.com>"]
 homepage = "https://github.com/jenson-shi/djb33-rs"
 repository = "https://github.com/jenson-shi/djb33-rs.git"

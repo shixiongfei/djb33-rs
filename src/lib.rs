@@ -1,5 +1,5 @@
 /*
-    Copyright (c) 2016 Xiongfei Shi (shixf.com)
+    Copyright (c) 2016, 2017 Xiongfei Shi (shixf.com)
 
   Permission is hereby granted, free of charge, to any person obtaining a copy
   of this software and associated documentation files (the "Software"), to deal
@@ -23,28 +23,24 @@
 
 pub const DJB33_INIT: u32 = 5381;
 
-pub fn djb33(mut h: u32, data: &[u8]) -> u32 {
-    let len = data.len();
-    
-    if len > 0 {
-        for i in 0..len  {
-            /* hash * 33 + d */
-            h = h.wrapping_mul(33).wrapping_add(data[i] as u32);
-        }
+pub fn djb33(h: u32, data: &[u8]) -> u32 {
+    let mut hash = h;
+
+    for v in data {
+        /* hash * 33 + d */
+        hash = hash.wrapping_mul(33).wrapping_add(*v as u32);
     }
-    
-    h
+
+    hash
 }
 
-pub fn djb33_xor(mut h: u32, data: &[u8]) -> u32 {
-    let len = data.len();
-    
-    if len > 0 {
-        for i in 0..len  {
-            /* hash * 33 ^ d */
-            h = h.wrapping_mul(33) ^ (data[i] as u32);
-        }
+pub fn djb33_xor(h: u32, data: &[u8]) -> u32 {
+    let mut hash = h;
+
+    for v in data {
+        /* hash * 33 ^ d */
+        hash = hash.wrapping_mul(33) ^ (*v as u32);
     }
-    
-    h
+
+    hash
 }

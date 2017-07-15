@@ -1,5 +1,5 @@
 /*
-    Copyright (c) 2016 Xiongfei Shi (shixf.com)
+    Copyright (c) 2016, 2017 Xiongfei Shi (shixf.com)
 
   Permission is hereby granted, free of charge, to any person obtaining a copy
   of this software and associated documentation files (the "Software"), to deal
@@ -25,12 +25,12 @@ extern crate djb33;
 
 fn main() {
     let s = "HelloWorld.";
-    
+
     let mut h1 = djb33::DJB33_INIT;
     h1 = djb33::djb33(h1, s.as_bytes());
-    
+
     let h2 = djb33::djb33_xor(djb33::DJB33_INIT, s.as_bytes());
-    
+
     println!("djb33 {}", h1);
     println!("djb33 xor {}", h2);
 }
